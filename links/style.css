@@ -1,0 +1,127 @@
+@font-face {
+    font-family: AnonymousPro;
+    src: url("AnonymousPro-Regular.ttf");
+}
+@font-face {
+    font-family: SpaceMono;
+    src: url("SpaceMono-Regular.ttf");
+}
+
+html {
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:focus {
+    outline: 0;
+}
+
+body {
+    background-color: #242424;
+    font-family: AnonymousPro, monospace;
+    color: #f2f2f2;
+    margin: 0;
+}
+
+#site-title {
+    grid-area: title;
+}
+.grid-container {
+    display: grid;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    align-content: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: 800px;
+    grid-row-gap: 50px;
+    grid-column-gap: 35px;
+    grid-template-areas:
+    "title"
+    "entries"
+    ;
+}
+
+.tag-container {
+    display: grid;
+    grid-area: tags;
+    justify-self: center;
+    grid-row-gap: 15px;
+    grid-template-areas:
+    "tags   tags"
+    "clear  clear"
+    ;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.entries {
+    grid-area: entries;
+    column-count: 1;
+    column-gap: 40px;
+}
+
+@media (max-width: 1000px) {
+    .grid-container {
+        justify-items: start;
+        margin: 10px !important;
+        margin-top: 50px !important;
+        margin-bottom: 50px !important;
+        grid-template-columns:  1fr;
+        grid-template-areas:
+        "title"
+        "entries"
+        ;
+    }
+
+    .entries {
+        grid-area: entries;
+        column-count: 1;
+    }
+
+    .entry {
+        width: 90vw !important;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+}
+
+.entry {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 45px;
+    width: 100% 
+}
+
+.title {
+    font-size: 25px;
+    font-family: SpaceMono, monospace;
+    word-wrap: break-word;
+    .interactive();
+}
+
+.link {
+    opacity: 0.2;
+    font-size: 13px;
+    margin-bottom: 5px;
+    word-break: break-all;
+}
+
+.desc {
+    opacity: 0.5;
+    font-size: 16px;
+    font-family: AnonymousPro, monospace;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: flex-end;
+}
