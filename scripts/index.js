@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         try {
             var staff = JSON.parse(data)
             staff.staff.forEach((writer) => {
+                console.log(writer.name)
                 getPosts(writer).then(updateFeed).catch(console.error)
             })
         } catch (err) {
@@ -22,34 +23,28 @@ function el(nodeName, nodeId, nodeClass) {
 function updateFeed(posts) {
     var parent = document.getElementById("posts")
     posts.forEach((post) => {
-        var div = el("div")
+        var div = el("div", "", "entry")
         console.log(post)
+        // <div class="link">${post.link}</div>
         div.innerHTML = `
-            <div class="entry>
                 <div class="author">${post.author}</div>
-                <div class="title">${post.title}</div>
-                <div class="link">${post.link}</div>
-                <div class="desc">${post.long}</div>
-            </div>`
+                <div class="desc">${post.message}</div>
+            `
         parent.appendChild(div)
-        // var container = el("div", "", "entry")
-        // var desc = el("div", "", "desc")
-        // desc.innerHTML = post.long
-        // var link = el("div", "", "link")
-        // link.innerHTML = post.link
-        // container.appendChild(link)
-        // container.appendChild(desc)
-        // console.log(container)
     })
 }
 
 async function getPosts(writer) {
-    var data = await new DatArchive(writer.dat).readFile("writer.json")
+    console.log("getting posts for", writer.name)
+    var data = await new DatArchive(writer.dat).readFile("portal.json")
     try {
         data = JSON.parse(data) 
-        return data.posts.map((post) => { post.author = writer.name; return post })
+        return data.feed.filter((post) => {
+            return post.message.indexOf("rotonde") >= 0
+        }).map((post) => { post.author = writer.name; return post })
     } catch (err) {
         console.error("Error when fetching posts for", writer.name, err)
+        return []
     }
 }
 
