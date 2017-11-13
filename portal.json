@@ -1,0 +1,17 @@
+{
+  "name": "The-Daily-Descent",
+  "desc": "",
+  "port": [],
+  "feed": [
+    {
+      "message": "The Daily Descent covers daily P2P news in a P2P way.",
+      "timestamp": 1510605131535,
+      "editstamp": 1510605253755,
+      "media": "day1.jpg",
+      "target": []
+    }
+  ],
+  "site": "",
+  "dat": "dat://25795ca2c0acba5c94b502e73e5c59379d2698232afdbc64982e9f54e4b756fa",
+  "client_version": "0.1.9"
+}
