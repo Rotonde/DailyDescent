@@ -31,6 +31,7 @@ each staff writer has a feed of posts, an array, according to the following form
 		"link": "dat://beakerbrowser.com",
 		"title": "BeakerBrowser 0.8 is here",
 		"short": "The long-awaited beaker 0.8 has arrived!etcetcetc ",
+		"tags": ["beaker", "dat", "browsers"],
 		"long": "BeakerBrowser, the only browser with dat protocol support as of now, has landed their 0.8 version which contains many new features and p2p ideas.[...]",
 		"media": "/path/to/media || choose_random"
 	}]
