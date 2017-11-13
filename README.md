@@ -41,3 +41,9 @@ each staff writer has a feed of posts, an array, according to the following form
 
 ### cross-posting to rotonde
 posting to a rotonde account can be done by a bot that reads the posts by each author in writers.json. the bot then posts the link, the short desc and the media.
+
+
+### staff guidelines
+i think [wikitribune](https://beta.wikitribune.com) has a good idea on how to manage something like this
+* [How to write](https://beta.wikitribune.com/project/how-to-write-a-piece-of-journalism-for-wikitribune/)
+* [Style guide](https://beta.wikitribune.com/project/wikiproject-style-guide/)
