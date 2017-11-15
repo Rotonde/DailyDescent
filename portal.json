@@ -14,7 +14,12 @@
       "message": "{*Beaker Browser*} Updates to 0.78 - Improves stability for #rotonde portals! https://beakerbrowser.com/releases/0-7-8/",
       "timestamp": 1510776326374,
       "editstamp": 1510776801832,
-      "media": "beaker.jpg",
+      "media": "beaker.jpg"
+    },
+    {
+      "message": "Dep is an experimental package manager for node with dat support.\nhttps://github.com/depjs/dep",
+      "timestamp": 1510699750440,
+      "media": "dep.jpg",
       "target": []
     }
   ],
