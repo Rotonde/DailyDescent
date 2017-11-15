@@ -17,7 +17,7 @@
       "media": "beaker.jpg"
     },
     {
-      "message": "Dep is an experimental package manager for node with dat support.\nhttps://github.com/depjs/dep",
+      "message": "{*Dep*} is an experimental package manager for node with #dat support.\nhttps://github.com/depjs/dep",
       "timestamp": 1510699750440,
       "media": "dep.jpg",
       "target": []
