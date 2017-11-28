@@ -28,9 +28,15 @@
       "editstamp": 1510863204369,
       "media": "dat-logo.png",
       "target": []
+    },
+    {
+      "message": "Peer To Peer Event in Los Angeles on December 10th. https://peer-to-peer-web.com/",
+      "timestamp": 1511895686059,
+      "media": "openla.jpg",
+      "target": []
     }
   ],
   "site": "",
   "dat": "dat://25795ca2c0acba5c94b502e73e5c59379d2698232afdbc64982e9f54e4b756fa",
-  "client_version": "0.2.1"
+  "client_version": "0.2.6"
 }
